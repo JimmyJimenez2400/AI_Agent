@@ -1,6 +1,25 @@
 import os
 from config import MAX_CHARS
 
+schema_get_file_content = {
+      "type": "function",
+      "function": {
+        "name": "get_file_content",
+        "description": "Display the content from a specified file_path relative to the working_directory",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "file_path": {
+              "type": "string",
+              "description": "file_path to display the content from, relative to the working directory",
+            },
+          },
+          "required": ["file_path"],
+        },
+      },
+      
+    }
+
 def get_file_content(working_directory: str, file_path: str) -> str:
   try:
     
@@ -29,7 +48,7 @@ def get_file_content(working_directory: str, file_path: str) -> str:
 
     return contents
   except Exception as e:
-    return f'Error: get_files_content: {e}'
+    return f'Error: get_file_content: {e}'
   
   
   
