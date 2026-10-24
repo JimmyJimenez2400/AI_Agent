@@ -12,7 +12,7 @@ schema_run_python_file = {
       "properties": {
         "file_path": {
           "type": "string",
-          "description": "path to the file inside the relative directory",
+          "description": "Path to the Python file to execute, relative to the working directory.",
               },
         "args": {
           "type": "array",
