@@ -20,7 +20,7 @@ schema_run_python_file = {
           "items": {
             "type": "string",
             },
-      }
+      },
       },
       "required": ["file_path"],
     }
